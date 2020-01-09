@@ -1,0 +1,197 @@
+@import "mixins.sass"
+
+
+.top-nav
+  +flex-row
+  justify-content: space-around
+  border-top: 3px solid $secondaryColor
+  border-bottom: 1px solid #d6d9dc
+  padding: 0.5rem 0rem
+  align-items: center
+  background-color: $primaryColor
+  font-size: 0.8rem
+
+  a
+    color: black
+
+  .sign-up
+    +border(3px, $gray, 1px)
+    padding: 0.75rem 0.5rem
+    font-size: 0.75rem
+    background-color: $blueColor
+    color: white
+  
+  .login
+    color: $blueColor
+    font-size: 0.80rem
+  input 
+    height: 1.5rem;
+    +border(3px,$gray, 1px)
+    width: 40rem
+    padding: 0.25rem 0.25rem
+ 
+  img 
+    height: 2rem
+
+header 
+  border-bottom: 1px solid #d6d9dc
+main 
+  +flex-row
+  height: 40rem
+
+
+.side-nav
+  border-right: 1px solid #d6d9dc
+  +flex-column 
+  padding-right: 1rem
+  padding-left: 1rem
+  padding-top: 2rem
+  font-size: 0.85rem
+  
+  a 
+    color: black
+
+  .side-nav-link 
+    margin-bottom: 1rem
+  
+
+.side-nav-tab
+  +flex-column 
+  a
+    padding-bottom: 1rem
+    padding-left: 2rem
+
+footer 
+  +flex-row
+  
+  background-color: $darkishGray
+  color: $gray
+
+  h3 
+    text-transform: uppercase
+    font-size: 1.10rem
+  
+  ul 
+   font-size: .8rem
+
+  
+  .col
+    padding-top: 2rem
+    justify-content: space-between
+    padding-left: 1rem
+    padding-right: 2rem
+    p 
+     font-size: .8rem
+     +flex-column
+     justify-content: flex-end
+
+     width: 70%
+     padding-right: 2rem
+
+    
+  
+  
+  
+  
+
+.social-media
+  +flex-row
+  
+
+  li
+    list-style: none
+    padding-right: 1rem
+    font-size: .8rem
+.footer-logo
+    +flex-row
+    
+    img 
+      height: 4rem
+      
+      
+.main-content
+  +flex-column 
+
+  .top-part
+    +flex-row 
+    align-items: center
+    justify-content: space-between
+    padding-right: 4rem
+    padding-left: 1rem
+
+    h1 
+      font-weight: normal
+      font-size: 1.75rem
+
+  .ask-question-button
+    +border(3px, $gray, 1px)
+    padding: 0.75rem 0.5rem
+    font-size: 0.75rem
+    background-color: $blueColor
+    color: white
+
+  .bottom-part
+    +flex-row
+    align-items: center
+    justify-content: space-between
+    padding-left: 1rem
+
+    a
+      border: solid $gray 1px
+      padding: 0.4rem
+      font-size: 0.8rem
+
+    .newest-filter
+      border-radius: 3px 0px 0px 3px
+      margin-left: 10rem
+    
+
+    .more-filter
+      border-radius: 0px 3px 3px 0px
+      margin-right: 2rem
+      
+
+    .filter-button
+      margin-right: 4rem
+      +border(3px, $gray, 1px)
+      background-color: $blueColor
+      background-color: $grayBlue
+      color: $darkBlue
+      
+      
+.votes-answers
+  text-align: center
+  margin-right: 1rem
+  +flex-column
+
+.question-preview
+  +flex-column
+  align-items: baseline
+  
+
+.question-and-answer
+  margin-right: 2rem
+  
+
+.question-container
+  +flex-row
+  align-items: baseline
+  border-bottom: 1px solid #d6d9dc
+  width: 100%
+  padding-bottom: 1rem
+  
+
+.ask-question-section
+  +flex-column
+  margin-left: 5rem
+
+  form 
+   
+    .title
+      +flex-column
+      width: 25%
+
+    .question-input
+      height: 10rem
+
+

@@ -7,9 +7,9 @@ const AskQuestion = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const postQuestion = async event => {
     event.preventDefault()
-    const resp = await axios.post('https://localhost:5001/api/Questions', {
-      questionTitle: title,
-      questionContent: content,
+    const resp = await axios.post('https://localhost:5001/api/Post', {
+      postTitle: title,
+      postContent: content,
     })
     setIsSubmitted(true)
     setTimeout(() => {

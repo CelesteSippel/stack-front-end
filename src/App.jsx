@@ -17,8 +17,8 @@ const App = () => {
             path="/ask-question-page"
             component={AskQuestionPage}
           ></Route>
-          <Footer />
         </Switch>
+        <Footer />
       </Router>
     </>
   )

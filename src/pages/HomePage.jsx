@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom'
 const cog = <FontAwesomeIcon icon={faCog} />
 
 const HomePage = () => {
-  const [questionData, setQuestionData] = useState([])
-  const getQuestions = async () => {
-    const resp = await axios.get('https://localhost:5001/api/Questions')
+  const [postData, setPostData] = useState([])
+  const getPosts = async () => {
+    const resp = await axios.get('https://localhost:5001/api/Post')
     console.log(resp.data)
-    setQuestionData(resp.data)
+    setPostData(resp.data)
   }
 
   useEffect(() => {
-    getQuestions()
+    getPosts()
   }, [])
 
   return (
@@ -50,13 +50,13 @@ const HomePage = () => {
             </div>
           </header>
           <section className="question-preview">
-            {questionData.map((item, i) => {
+            {postData.map((item, i) => {
               return (
                 <Question
                   key={item.id}
-                  questionTitle={item.questionTitle}
-                  questionContent={item.questionContent}
-                  votes={item.questionLike}
+                  postTitle={item.postTitle}
+                  postContent={item.postContent}
+                  votes={item.postUpVote}
                 />
               )
             })}

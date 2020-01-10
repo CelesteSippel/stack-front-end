@@ -6,7 +6,8 @@ const Question = props => {
       <div className="question-container">
         <section className="votes-answers">
           <div className="total-votes">
-            <h2>{props.votes}</h2>
+            <h2>{props.respUpvote}</h2>
+            <h2>{props.respDownVote}</h2>
             <p>votes</p>
           </div>
           <div className="total-answers">
@@ -20,8 +21,8 @@ const Question = props => {
           </div>
         </section>
         <section className="question-and-answer">
-          <a href="#">{props.questionTitle}</a>
-          <p>{props.questionContent}</p>
+          <a href="#">{props.postTitle}</a>
+          <p>{props.postContent}</p>
         </section>
       </div>
     </>

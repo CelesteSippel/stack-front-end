@@ -1,13 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-const Answer = () => {
-  const [answer, setAnswer] = useState({[]});
-  
+const Answer = props => {
   return (
-    <div>
-      
-    </div>
-  );
-}
+    <>
+      <div>
+        <p>Answer Content: {props.content}</p>
 
-export default Answer;
+        <div>
+          <span>Up Votes: {props.respUpvote}</span>
+          <span>Down Votes: -{props.respDownVote}</span>
+        </div>
+      </div>
+    </>
+  )
+}
+export default Answer

@@ -10,11 +10,21 @@ const cog = <FontAwesomeIcon icon={faCog} />
 
 const HomePage = () => {
   const [postData, setPostData] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
+
   const getPosts = async () => {
     const resp = await axios.get('https://localhost:5001/api/Post')
     console.log(resp.data)
     setPostData(resp.data)
   }
+
+  // const getSearchData = async () => {
+  //   const resp = await axios.get(
+  //     'https://localhost:5001/api/Post/searchterm/{PostContent}' +
+  //       searchTerm / { PostContent }
+  //   )
+  //   setPostData(resp.data)
+  // }
 
   useEffect(() => {
     getPosts()
